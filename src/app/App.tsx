@@ -9,6 +9,7 @@ import Image from "next/image";
 import Transcript from "./components/Transcript";
 import Events from "./components/Events";
 import BottomToolbar from "./components/BottomToolbar";
+import ApiKeyManager from "./components/ApiKeyManager";
 
 // Types
 import { SessionStatus } from "@/app/types";
@@ -18,6 +19,7 @@ import type { RealtimeAgent } from '@openai/agents/realtime';
 import { useTranscript } from "@/app/contexts/TranscriptContext";
 import { useEvent } from "@/app/contexts/EventContext";
 import { useRealtimeSession } from "./hooks/useRealtimeSession";
+import { apiRequest } from "./lib/apiRequest";
 import { createModerationGuardrail } from "@/app/agentConfigs/guardrails";
 
 // Agent configs
@@ -175,7 +177,7 @@ function App() {
 
   const fetchEphemeralKey = async (): Promise<string | null> => {
     logClientEvent({ url: "/session" }, "fetch_session_token_request");
-    const tokenResponse = await fetch("/api/session");
+    const tokenResponse = await apiRequest("/api/session");
     const data = await tokenResponse.json();
     logServerEvent(data, "fetch_session_token_response");
 
@@ -506,6 +508,10 @@ function App() {
             </div>
           )}
         </div>
+      </div>
+
+      <div className="px-5 pb-2">
+        <ApiKeyManager />
       </div>
 
       <div className="flex flex-1 gap-2 px-2 overflow-hidden relative">

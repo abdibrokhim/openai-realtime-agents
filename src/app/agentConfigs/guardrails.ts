@@ -1,5 +1,6 @@
 import { zodTextFormat } from 'openai/helpers/zod';
 import { GuardrailOutputZod, GuardrailOutput } from '@/app/types';
+import { createApiHeaders } from '@/app/lib/apiRequest';
 
 // Validator that calls the /api/responses endpoint to
 // validates the realtime output according to moderation policies. 
@@ -35,9 +36,7 @@ export async function runGuardrailClassifier(
 
   const response = await fetch('/api/responses', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    headers: createApiHeaders(),
     body: JSON.stringify({
       model: 'gpt-4o-mini',
       input: messages,

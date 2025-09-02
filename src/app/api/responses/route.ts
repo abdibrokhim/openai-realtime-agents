@@ -4,7 +4,7 @@ import OpenAI from 'openai';
 const CORS_HEADERS: Record<string, string> = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-API-Key',
 };
 
 export async function OPTIONS() {
@@ -13,14 +13,33 @@ export async function OPTIONS() {
 
 // Proxy endpoint for the OpenAI Responses API
 export async function POST(req: NextRequest) {
-  const body = await req.json();
+  try {
+    const body = await req.json();
 
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    // Try to get API key from header first, then fallback to environment variable
+    const userApiKey = req.headers.get("X-API-Key");
+    const apiKey = userApiKey || process.env.OPENAI_API_KEY;
 
-  if (body.text?.format?.type === 'json_schema') {
-    return await structuredResponse(openai, body);
-  } else {
-    return await textResponse(openai, body);
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "API key not provided. Please add your OpenAI API key." },
+        { status: 401, headers: CORS_HEADERS }
+      );
+    }
+
+    const openai = new OpenAI({ apiKey });
+
+    if (body.text?.format?.type === 'json_schema') {
+      return await structuredResponse(openai, body);
+    } else {
+      return await textResponse(openai, body);
+    }
+  } catch (error) {
+    console.error("Error in /responses:", error);
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500, headers: CORS_HEADERS }
+    );
   }
 }
 
