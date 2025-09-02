@@ -47,9 +47,6 @@ export const EventProvider: FC<PropsWithChildren> = ({ children }) => {
     if (item.type === 'message') {
       eventName = `${item.role}.${item.status}`;
     }
-    if (item.type === 'function_call') {
-      eventName = `function.${item.name}.${item.status}`;
-    }
     addLoggedEvent('server', eventName, item);
   };
 

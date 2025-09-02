@@ -31,22 +31,7 @@ export function useHandleSessionHistory() {
       .join("\n");
   };
 
-  const extractFunctionCallByName = (name: string, content: any[] = []): any => {
-    if (!Array.isArray(content)) return undefined;
-    return content.find((c: any) => c.type === 'function_call' && c.name === name);
-  };
-
-  const maybeParseJson = (val: any) => {
-    if (typeof val === 'string') {
-      try {
-        return JSON.parse(val);
-      } catch {
-        console.warn('Failed to parse JSON:', val);
-        return val;
-      }
-    }
-    return val;
-  };
+  
 
   const extractLastAssistantMessage = (history: any[] = []): any => {
     if (!Array.isArray(history)) return undefined;
@@ -67,23 +52,7 @@ export function useHandleSessionHistory() {
 
   /* ----------------------- event handlers ------------------------- */
 
-  function handleAgentToolStart(details: any, _agent: any, functionCall: any) {
-    const lastFunctionCall = extractFunctionCallByName(functionCall.name, details?.context?.history);
-    const function_name = lastFunctionCall?.name;
-    const function_args = lastFunctionCall?.arguments;
-
-    addTranscriptBreadcrumb(
-      `function call: ${function_name}`,
-      function_args
-    );    
-  }
-  function handleAgentToolEnd(details: any, _agent: any, _functionCall: any, result: any) {
-    const lastFunctionCall = extractFunctionCallByName(_functionCall.name, details?.context?.history);
-    addTranscriptBreadcrumb(
-      `function call result: ${lastFunctionCall?.name}`,
-      maybeParseJson(result)
-    );
-  }
+  
 
   function handleHistoryAdded(item: any) {
     console.log("[handleHistoryAdded] ", item);
@@ -185,8 +154,6 @@ export function useHandleSessionHistory() {
   }
 
   const handlersRef = useRef({
-    handleAgentToolStart,
-    handleAgentToolEnd,
     handleHistoryUpdated,
     handleHistoryAdded,
     handleTranscriptionDelta,

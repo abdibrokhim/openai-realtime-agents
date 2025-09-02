@@ -16,7 +16,7 @@ For full documentation, guides, and API references, see the official [OpenAI Age
 **NOTE:** For a version that does not use the OpenAI Agents SDK, see the [branch without-agents-sdk](https://github.com/openai/openai-realtime-agents/tree/without-agents-sdk).
 
 Primary pattern used:
-1. **Chat-Supervisor:** A realtime chat agent handles short turns and micro-corrections. A supervisor (e.g., `gpt-4.1`) generates practice prompts, concise explanations, and mini-quizzes via tools.
+1. **Single Chat Agent:** A realtime chat agent handles short turns and micro-corrections without tool-calling.
 
 ## Setup
 
@@ -28,35 +28,28 @@ Primary pattern used:
 
 # Chat-Supervisor
 
-This is implemented in the [chatSupervisor](src/app/agentConfigs/chatSupervisor/index.ts) Agent Config. The chat agent keeps the flow natural and brief; the supervisor creates targeted teaching content and explanations.
+This is implemented in the [chatSupervisor](src/app/agentConfigs/chatSupervisor/index.ts) Agent Config. The chat agent keeps the flow natural and brief.
 
 Video walkthrough: [https://x.com/noahmacca/status/1927014156152058075](https://x.com/noahmacca/status/1927014156152058075)
 
 ## Example
 ![Screenshot of the Chat Supervisor Flow](/public/screenshot_chat_supervisor.png)
-*In this exchange, note the immediate response to collect the phone number, and the deferral to the supervisor agent to handle the tool call and formulate the response. There ~2s between the end of "give me a moment to check on that." being spoken aloud and the start of the "Thanks for waiting. Your last bill...".*
+*In this exchange, note the immediate response to keep the flow natural and brief.*
 
 ## Schematic
 ```mermaid
 sequenceDiagram
     participant User
     participant ChatAgent as Chat Agent<br/>(gpt-4o-realtime-mini)
-    participant Supervisor as Supervisor Agent<br/>(gpt-4.1)
-    participant Tool as Tool
+    participant Supervisor as (removed)
+    participant Tool as (removed)
 
     alt Basic chat or info collection
         User->>ChatAgent: User message
         ChatAgent->>User: Responds directly
-    else Requires higher intelligence and/or tool call
+    else Complex request
         User->>ChatAgent: User message
-        ChatAgent->>User: "Let me think"
-        ChatAgent->>Supervisor: Forwards message/context
-        alt Tool call needed
-            Supervisor->>Tool: Calls tool
-            Tool->>Supervisor: Returns result
-        end
-        Supervisor->>ChatAgent: Returns response
-        ChatAgent->>User: Delivers response
+        ChatAgent->>User: Responds directly (concise / redirect if needed)
     end
 ```
 
@@ -69,14 +62,9 @@ sequenceDiagram
   - However, more assistant responses will start with "Let me think", rather than responding immediately with the full response.
 
 ## Modifying for your own agent
-1. Update [supervisorAgent](src/app/agentConfigs/chatSupervisorDemo/supervisorAgent.ts).
-  - Add your existing text agent prompt and tools if you already have them. This should contain the "meat" of your voice agent logic and be very specific with what it should/shouldn't do and how exactly it should respond. Add this information below `==== Domain-Specific Agent Instructions ====`.
-  - You should likely update this prompt to be more appropriate for voice, for example with instructions to be concise and avoiding long lists of items.
-2. Update [chatAgent](src/app/agentConfigs/chatSupervisor/index.ts).
+1. Update [chatAgent](src/app/agentConfigs/chatSupervisor/index.ts).
   - Customize the chatAgent instructions with your own tone, greeting, etc.
-  - Add your tool definitions to `chatAgentInstructions`. We recommend a brief yaml description rather than json to ensure the model doesn't get confused and try calling the tool directly.
-  - You can modify the decision boundary by adding new items to the `# Allow List of Permitted Actions` section.
-3. To reduce cost, try using `gpt-4o-mini-realtime` for the chatAgent and/or `gpt-4.1-mini` for the supervisor model. To maximize intelligence on particularly difficult or high-stakes tasks, consider trading off latency and adding chain-of-thought to your supervisor prompt, or using an additional reasoning model-based supervisor that uses `o4-mini`.
+2. To reduce cost, try using `gpt-4o-mini-realtime` for the chatAgent.
 
 # Agentic Pattern 2: Sequential Handoffs
 
@@ -115,10 +103,7 @@ export default [greeterAgent, haikuWriterAgent];
 ```
 ## Teaching Flow
 
-The supervisor uses three tools:
-- `generatePracticePrompt(level, topic, target?)`
-- `explainMistake(sentence, focus?)`
-- `miniQuiz(level, topic)`
+No tool-calling is used in this version. The agent responds directly, keeping turns short and redirecting when necessary.
 
 ## Schematic
 
@@ -183,6 +168,7 @@ sequenceDiagram
 ## Next Steps
 - You can copy these templates to make your own multi-agent voice app! Once you make a new agent set config, add it to `src/app/agentConfigs/index.ts` and you should be able to select it in the UI in the "Scenario" dropdown menu.
 - Each agentConfig can define instructions, tools, and toolLogic. By default all tool calls simply return `True`, unless you define the toolLogic, which will run your specific tool logic and return an object to the conversation (e.g. for retrieved RAG context).
+ - Each agentConfig can define instructions; tool-calling is removed in this branch.
 - If you want help shaping your own English tutor prompt, see the metaprompt [here](src/app/agentConfigs/voiceAgentMetaprompt.txt).
 
 ## Output Guardrails
@@ -190,7 +176,7 @@ Assistant messages are checked for safety and educational relevance. Categories:
 
 ## Navigating the UI
 - You can select agent scenarios in the Scenario dropdown, and automatically switch to a specific agent with the Agent dropdown.
-- The conversation transcript is on the left, including tool calls, tool call responses, and agent changes. Click to expand non-message elements.
+- The conversation transcript is on the left, including agent changes. Click to expand non-message elements.
 - The event log is on the right, showing both client and server events. Click to see the full payload.
 - On the bottom, you can disconnect, toggle between automated voice-activity detection or PTT, turn off audio playback, and toggle logs.
 
