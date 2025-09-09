@@ -1,0 +1,3867 @@
+{
+	"info": {
+		"_postman_id": "1e6f747d-28d4-4718-8510-5b8781a359b3",
+		"name": "Ibrokhim Englify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21700421",
+		"_collection_link": "https://abdibrokhims-team.postman.co/workspace/My-Workspace~6302d1b0-3a15-4a2d-847e-14b6cddaa6c4/collection/21700421-1e6f747d-28d4-4718-8510-5b8781a359b3?action=share&source=collection_link&creator=21700421"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "GET user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/profile",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": {
+								"id": 26,
+								"uuid": "73LYW3d3n05fxFTc",
+								"username": "joshqin_joshqin1",
+								"firstname": "Joshqin",
+								"lastname": "",
+								"avatar": {
+									"full_url": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+									"path": null
+								},
+								"is_individual": 1,
+								"level": "Starter",
+								"student_status": 200,
+								"payment_access": 100,
+								"payment_details": {
+									"amount": 400000,
+									"text": "Sizda to'lov muddati tugagan, shuning uchun siz platfromaga kira olmaysiz. Darslarni davom ettirish uchun to'lovni amalga oshiring va Support menejer yoki Englify Administratsiyasiga aloqaga chiqing.",
+									"url": "https://pay.englify.uz"
+								},
+								"lastPayment": {
+									"amount": 0,
+									"amount_display": 0,
+									"from_date": "2025-06-02",
+									"to_date": "2026-06-15",
+									"payment_type": {
+										"id": 1100,
+										"name": "Discount"
+									},
+									"payment_method": {
+										"id": 200,
+										"name": "Auto"
+									},
+									"tariff": {
+										"id": 2,
+										"name": "Joshqin",
+										"price": 400000
+									},
+									"created_at": "2025-06-30 17:11:18"
+								},
+								"deviceIds": [
+									"7A6D2BC5-7E75-4013-A0A9-71B1113F7484",
+									"0B697701-C66B-4185-AEED-D57BDDA99BCA",
+									"1CC16796-09BD-498B-A88B-1320FD0B3FB6"
+								],
+								"performance": {
+									"point": 1472,
+									"coin": 1471
+								},
+								"created_at": "2025-08-25 19:29:17",
+								"themes": [],
+								"tariff": {
+									"id": 2,
+									"name": "Joshqin",
+									"price": 400000
+								},
+								"has_survey": false,
+								"current_unit_id": null
+							}
+						}
+					]
+				},
+				{
+					"name": "GET leaderboard list by level",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/ranking/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"ranking",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": {
+								"list": [
+									{
+										"id": 13361,
+										"uuid": "uwYrGFTkfU7moO9G",
+										"student": {
+											"id": 1906,
+											"full_name": "Gulhayo Saidova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 15651,
+										"uuid": "3hPes570x1loRCAg",
+										"student": {
+											"id": 3725,
+											"full_name": "Barkamol Muhammadiyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/CIv-a3_4UehgCdX8nVEw_Tqsz8tcZSC2.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12694,
+										"uuid": "wdH_fBcGKTvfraQl",
+										"student": {
+											"id": 1507,
+											"full_name": "Shahzodaxon Erkinova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/3AX2_-xKX1bs5YlOGqo1j02NaHyQU2P_.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12258,
+										"uuid": "RRdXygt3KIzSgo1r",
+										"student": {
+											"id": 1289,
+											"full_name": "Muhlisa Parhadova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/_N18EjMrgUE3S8drjqidNrO9HD9qFMqx.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 13145,
+										"uuid": "MLNu8gDh5RUcgCKy",
+										"student": {
+											"id": 1758,
+											"full_name": "Javoxir Ibragimov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/CaGYL8Evpx7QFtSXfP_r6-eR2mJIGyx8.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 13455,
+										"uuid": "ldFDdXau8e4sDJSk",
+										"student": {
+											"id": 1977,
+											"full_name": "Hamza Babadjanov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/QQmsjh4452QKmfiYzqgMZ77uWYCqccOk.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 13083,
+										"uuid": "nOqsobC4KSzHXKvQ",
+										"student": {
+											"id": 1720,
+											"full_name": "Salohiddin Umrzoqov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/CXNwPh4wcewf5LO3FZWD9ibYtcw_PmBO.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12465,
+										"uuid": "_pCof7etzqo8cl3k",
+										"student": {
+											"id": 1385,
+											"full_name": "Yulduz Baxramova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/I6esVZc5Gr75FmZKKqK0d5IhG80Ehfut.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 11925,
+										"uuid": "UBAKdKGLHNhg7K6U",
+										"student": {
+											"id": 1119,
+											"full_name": "Akbar Doniyorov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/3_jousLLZ3yUCaLFh_aUXw6TH4lZsHSk.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 13601,
+										"uuid": "LBbARmUUsMsDtwd2",
+										"student": {
+											"id": 2089,
+											"full_name": "Adhamov .",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/4o_zhsYlDuPJfUChwESyw0D8nHvzKDTv.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12815,
+										"uuid": "mWfUn80wfp3nXRAb",
+										"student": {
+											"id": 1569,
+											"full_name": "O'g'ilbeka Abdimurotova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/9K1CFzydZQ-CIYW6xBdo236_C2wCTI7W.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 15728,
+										"uuid": "VeeBxZIRFSPgGfpm",
+										"student": {
+											"id": 3817,
+											"full_name": "Shukurbek Mengsaidov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/XJ5QN-I55TCQz7xI9FqYWkk8VRZoEPnR.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12374,
+										"uuid": "z_XVent6oqvRtRFZ",
+										"student": {
+											"id": 1342,
+											"full_name": "Muyassar Rejapova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/yHezoRlv_ZgRMpEaJm0FoBwE8Amnd39E.jpg",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12940,
+										"uuid": "s8yplEiHSKIpqZq8",
+										"student": {
+											"id": 1636,
+											"full_name": "Xamidulla Axmedov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12860,
+										"uuid": "k3_vjtJgWO6RZlEk",
+										"student": {
+											"id": 1593,
+											"full_name": "Muhammadsolih Olimjonov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2854,
+										"amount": 2854,
+										"type": 100
+									},
+									{
+										"id": 12905,
+										"uuid": "r9FoaDUodOA2ktjU",
+										"student": {
+											"id": 1616,
+											"full_name": "Muqaddas Radjabova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2849,
+										"amount": 2849,
+										"type": 100
+									},
+									{
+										"id": 11787,
+										"uuid": "j0C3EFWkICDLiZbU",
+										"student": {
+											"id": 1051,
+											"full_name": "Sherov Ortiqbek",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2846,
+										"amount": 2846,
+										"type": 100
+									},
+									{
+										"id": 10298,
+										"uuid": "d3YDOPNK4kiJ2n0S",
+										"student": {
+											"id": 308,
+											"full_name": "Azamat Sadullaev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2842,
+										"amount": 2842,
+										"type": 100
+									},
+									{
+										"id": 11875,
+										"uuid": "za_ltHzHuPgjBoi1",
+										"student": {
+											"id": 1097,
+											"full_name": "Bekboy Khurramov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2842,
+										"amount": 2842,
+										"type": 100
+									},
+									{
+										"id": 11909,
+										"uuid": "unGzbNtz5dFdV8QL",
+										"student": {
+											"id": 1113,
+											"full_name": "Abdumalik Boyzaqov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2842,
+										"amount": 2842,
+										"type": 100
+									},
+									{
+										"id": 11611,
+										"uuid": "PZ_VIpNrIdJt24RD",
+										"student": {
+											"id": 960,
+											"full_name": "Omina Egamberdiyeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2842,
+										"amount": 2842,
+										"type": 100
+									},
+									{
+										"id": 13406,
+										"uuid": "50Ops97AlpavdSHv",
+										"student": {
+											"id": 1937,
+											"full_name": "Mashhurbek Ozodov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/tA8IqqL095vCKwjFOQ9baDCfA7_8PrCC.jpg",
+											"themes": []
+										},
+										"points": 2838,
+										"amount": 2838,
+										"type": 100
+									},
+									{
+										"id": 12580,
+										"uuid": "yLiZT9Ee2ij3b3WZ",
+										"student": {
+											"id": 1448,
+											"full_name": "Malika Ahmedova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2837,
+										"amount": 2837,
+										"type": 100
+									},
+									{
+										"id": 12915,
+										"uuid": "7dm_24GRaBdmvoeE",
+										"student": {
+											"id": 1622,
+											"full_name": "Nilufar Zaripova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/BA1DWUE3dItMUhBS6z6FD2ACCklVAC_W.jpg",
+											"themes": []
+										},
+										"points": 2834,
+										"amount": 2834,
+										"type": 100
+									},
+									{
+										"id": 10293,
+										"uuid": "pPTY2paNFWNTC3I0",
+										"student": {
+											"id": 305,
+											"full_name": "Muslima Shokirova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2828,
+										"amount": 2828,
+										"type": 100
+									},
+									{
+										"id": 12441,
+										"uuid": "YiGXk8NbJyMNpoqX",
+										"student": {
+											"id": 1374,
+											"full_name": "Fazliddin Fayzullayev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2826,
+										"amount": 2826,
+										"type": 100
+									},
+									{
+										"id": 12135,
+										"uuid": "qU0H_fwrs4Mu1qKx",
+										"student": {
+											"id": 1223,
+											"full_name": "Abdulbosit Odiljonov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/VGjoc4AkciQ38Hwke1f9Ulb2LTxelVVb.jpg",
+											"themes": []
+										},
+										"points": 2826,
+										"amount": 2826,
+										"type": 100
+									},
+									{
+										"id": 12919,
+										"uuid": "0GgIjF9SUOdCnQhi",
+										"student": {
+											"id": 1623,
+											"full_name": "Anvar Salomov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/afB3ikl_1-NU_XpzRgonW6EiblRNI66e.jpg",
+											"themes": []
+										},
+										"points": 2804,
+										"amount": 2804,
+										"type": 100
+									},
+									{
+										"id": 12917,
+										"uuid": "pnjSMyN6fPzjjlMK",
+										"student": {
+											"id": 1852,
+											"full_name": "Sunnatjon Eshpo'latov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2781,
+										"amount": 2781,
+										"type": 100
+									},
+									{
+										"id": 11997,
+										"uuid": "xqnIpfV0QGlzCqvm",
+										"student": {
+											"id": 1155,
+											"full_name": "Zulayxo Boltabayeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2732,
+										"amount": 2732,
+										"type": 100
+									},
+									{
+										"id": 11114,
+										"uuid": "7IY7N7rL9v70R1Kf",
+										"student": {
+											"id": 718,
+											"full_name": "Fariza Nigmatova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/bZ6oA3qv5ShHj9N_phoHZAbgYEESZjjg.jpg",
+											"themes": []
+										},
+										"points": 2718,
+										"amount": 2718,
+										"type": 100
+									},
+									{
+										"id": 12356,
+										"uuid": "dwaly6pl_xHwuFRE",
+										"student": {
+											"id": 1335,
+											"full_name": "Hilola Mustofokulova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2712,
+										"amount": 2712,
+										"type": 100
+									},
+									{
+										"id": 13103,
+										"uuid": "GBFCw0d0LpWFr4Sz",
+										"student": {
+											"id": 1732,
+											"full_name": "Elmurod Ibinxojayev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2704,
+										"amount": 2704,
+										"type": 100
+									},
+									{
+										"id": 16935,
+										"uuid": "upeFFBvd3mL9WoeV",
+										"student": {
+											"id": 4763,
+											"full_name": "Zarifa Abdiraxmonova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/Q-HT5oN6eELdsavF-rOiOUqgBHZDwcFw.jpg",
+											"themes": []
+										},
+										"points": 2642,
+										"amount": 2642,
+										"type": 100
+									},
+									{
+										"id": 11752,
+										"uuid": "hSkUXBla8UzItOEq",
+										"student": {
+											"id": 1034,
+											"full_name": "Umidbek Jumaniyazov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/1QIh6rbT9L4Kti1kBbMlEO_cKoviQKAG.jpg",
+											"themes": []
+										},
+										"points": 2639,
+										"amount": 2639,
+										"type": 100
+									},
+									{
+										"id": 11776,
+										"uuid": "l7CMeVjnO0TbiV8T",
+										"student": {
+											"id": 1047,
+											"full_name": "Roziya A",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2630,
+										"amount": 2630,
+										"type": 100
+									},
+									{
+										"id": 10940,
+										"uuid": "9reM41Etua_kRUMc",
+										"student": {
+											"id": 638,
+											"full_name": "Adxamjon Inamov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2620,
+										"amount": 2620,
+										"type": 100
+									},
+									{
+										"id": 11063,
+										"uuid": "A1dc0zKYKmu7Ve28",
+										"student": {
+											"id": 694,
+											"full_name": "Elmurod Bozorov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/NOO3b8PLvYFYbZcB7DY4u29uHt9FN9bm.jpg",
+											"themes": []
+										},
+										"points": 2620,
+										"amount": 2620,
+										"type": 100
+									},
+									{
+										"id": 12845,
+										"uuid": "NqqXY6UGTbDVvU3M",
+										"student": {
+											"id": 1586,
+											"full_name": "Husanjon Tolipov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2604,
+										"amount": 2604,
+										"type": 100
+									},
+									{
+										"id": 12733,
+										"uuid": "Im0sk8jeGTsF39UG",
+										"student": {
+											"id": 1524,
+											"full_name": "Asilbek Moydinjonov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2604,
+										"amount": 2604,
+										"type": 100
+									},
+									{
+										"id": 11011,
+										"uuid": "K9J_SHwCOxmWMVRV",
+										"student": {
+											"id": 669,
+											"full_name": "Aziza Xamdamboyeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2569,
+										"amount": 2569,
+										"type": 100
+									},
+									{
+										"id": 15665,
+										"uuid": "QGCvMByOvbk2GqhO",
+										"student": {
+											"id": 3764,
+											"full_name": "kvrrrrrrrr 7",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/pGPqvS7p9toNK2MQhKbXbg40mRg8B1_t.jpg",
+											"themes": []
+										},
+										"points": 2558,
+										"amount": 2558,
+										"type": 100
+									},
+									{
+										"id": 12367,
+										"uuid": "7H4lnuGdI_dk1Dmi",
+										"student": {
+											"id": 1340,
+											"full_name": "Muxlisa Mirsoliyeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2537,
+										"amount": 2537,
+										"type": 100
+									},
+									{
+										"id": 11765,
+										"uuid": "08B8uKyn2yOmj8Gh",
+										"student": {
+											"id": 1042,
+											"full_name": "Kamoliddin Abduxakimov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2532,
+										"amount": 2532,
+										"type": 100
+									},
+									{
+										"id": 11089,
+										"uuid": "VHH22m0dUfbZEQFf",
+										"student": {
+											"id": 2290,
+											"full_name": "Muxammad Ali Axmadaliyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/e_nNgLfrf4ve7VN60Pml61UbTebhGlSi.jpg",
+											"themes": []
+										},
+										"points": 2511,
+										"amount": 2511,
+										"type": 100
+									},
+									{
+										"id": 12806,
+										"uuid": "twP8JlxIWuFWGdHX",
+										"student": {
+											"id": 1563,
+											"full_name": "Muhammadjon 032 .",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/CzPFY9YTw5fOC8njHoUm1ajUCoj8pfen.jpg",
+											"themes": []
+										},
+										"points": 2505,
+										"amount": 2505,
+										"type": 100
+									},
+									{
+										"id": 9911,
+										"uuid": "gEXVc656LqmajUZ4",
+										"student": {
+											"id": 42,
+											"full_name": "Yaxyobek To'xtasinov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2492,
+										"amount": 2492,
+										"type": 100
+									},
+									{
+										"id": 12821,
+										"uuid": "qXwgQ0lGYSuisVRo",
+										"student": {
+											"id": 1571,
+											"full_name": "Abdullayev Dostonbek",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/qd8nttoSSYVwVm_JfmGRVOWr0OyKb8s3.jpg",
+											"themes": []
+										},
+										"points": 2492,
+										"amount": 2492,
+										"type": 100
+									},
+									{
+										"id": 9927,
+										"uuid": "VtV2Q4mJ9QfkasWI",
+										"student": {
+											"id": 898,
+											"full_name": "Nafisa Masharipova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/mXgyUs1k2B8wcsJivPS4IK5U7UdV0U7p.jpg",
+											"themes": []
+										},
+										"points": 2486,
+										"amount": 2486,
+										"type": 100
+									},
+									{
+										"id": 13135,
+										"uuid": "ieHzwtHFPK8tpsVc",
+										"student": {
+											"id": 1754,
+											"full_name": "Jasmina Rustamjonova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2483,
+										"amount": 2483,
+										"type": 100
+									},
+									{
+										"id": 17612,
+										"uuid": "nBQu6RAkOg_SBy1o",
+										"student": {
+											"id": 5213,
+											"full_name": "Aziza Rustamova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2480,
+										"amount": 2480,
+										"type": 100
+									},
+									{
+										"id": 13350,
+										"uuid": "DSZFdZW4zKWLNX6H",
+										"student": {
+											"id": 1900,
+											"full_name": "Mirshod Ismatov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/4ApPOhRhwsYv6EXpDgvuPL6f_DztcGwG.jpg",
+											"themes": []
+										},
+										"points": 2479,
+										"amount": 2479,
+										"type": 100
+									},
+									{
+										"id": 17595,
+										"uuid": "LPVOIZd44LglOomz",
+										"student": {
+											"id": 5292,
+											"full_name": "Malika Aknazarova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2473,
+										"amount": 2473,
+										"type": 100
+									},
+									{
+										"id": 11790,
+										"uuid": "hHEQJ4wFE4Y0N7jf",
+										"student": {
+											"id": 1053,
+											"full_name": "Maftuna Igamberdiyeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2459,
+										"amount": 2459,
+										"type": 100
+									},
+									{
+										"id": 18988,
+										"uuid": "WFrxizmwLdNg8My3",
+										"student": {
+											"id": 6378,
+											"full_name": "Sattarova Dilrabo",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2457,
+										"amount": 2457,
+										"type": 100
+									},
+									{
+										"id": 12048,
+										"uuid": "9HB3cUTtlUyMLhjo",
+										"student": {
+											"id": 1180,
+											"full_name": "Mamurjon Primov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2444,
+										"amount": 2444,
+										"type": 100
+									},
+									{
+										"id": 11042,
+										"uuid": "6yQOfXhAJdqiyqMZ",
+										"student": {
+											"id": 685,
+											"full_name": "Muhabbat Saliyeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2429,
+										"amount": 2429,
+										"type": 100
+									},
+									{
+										"id": 11932,
+										"uuid": "8GxBpGucmh6XL51K",
+										"student": {
+											"id": 1121,
+											"full_name": "Maftuna Abdujabbarova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/KNN-yAoUHCQ3Wge8FJWU-C1oNPkBlYf9.jpg",
+											"themes": []
+										},
+										"points": 2420,
+										"amount": 2420,
+										"type": 100
+									},
+									{
+										"id": 12037,
+										"uuid": "h1tbnkLSRTNBj1lL",
+										"student": {
+											"id": 1174,
+											"full_name": "Shodlik Axmedov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2409,
+										"amount": 2409,
+										"type": 100
+									},
+									{
+										"id": 13368,
+										"uuid": "V2cbUic1TSiRl7In",
+										"student": {
+											"id": 1911,
+											"full_name": "Malika Mirzabaeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/ZeK2N2VoOAL6O5RH0qNT-PYrYcF_WDHG.jpg",
+											"themes": []
+										},
+										"points": 2408,
+										"amount": 2408,
+										"type": 100
+									},
+									{
+										"id": 15691,
+										"uuid": "AZLw_kk6emaNH2Wc",
+										"student": {
+											"id": 3707,
+											"full_name": "Shahobiddin Chorshanbiyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/Uuoei5zAx0ZU_eWg-haRPPcH_kUSe60o.jpg",
+											"themes": []
+										},
+										"points": 2389,
+										"amount": 2389,
+										"type": 100
+									},
+									{
+										"id": 13896,
+										"uuid": "5xdhdcKDNxMqaXdT",
+										"student": {
+											"id": 2403,
+											"full_name": "Zayniddin Musayev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/YIi9eMdIrQUvXaxlVpQMd9H5ApIyzhrl.jpg",
+											"themes": []
+										},
+										"points": 2356,
+										"amount": 2356,
+										"type": 100
+									},
+									{
+										"id": 11646,
+										"uuid": "qpUm5l29fdNjxZ7j",
+										"student": {
+											"id": 979,
+											"full_name": "Navbahor Qodirova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2349,
+										"amount": 2349,
+										"type": 100
+									},
+									{
+										"id": 12644,
+										"uuid": "Z82Q6wjnywXKhYqJ",
+										"student": {
+											"id": 1482,
+											"full_name": "Farida O'sarova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2345,
+										"amount": 2345,
+										"type": 100
+									},
+									{
+										"id": 14040,
+										"uuid": "MqzN6f_KQlxeK4gD",
+										"student": {
+											"id": 2538,
+											"full_name": "Zuhra Boboqulova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/xMzH0Z0kdVL3MSouEpcT6sZCwNPUJypX.jpg",
+											"themes": []
+										},
+										"points": 2324,
+										"amount": 2324,
+										"type": 100
+									},
+									{
+										"id": 13378,
+										"uuid": "5mstlsf_Qn7cqVW9",
+										"student": {
+											"id": 1917,
+											"full_name": "Qunan Oskunbayev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2297,
+										"amount": 2297,
+										"type": 100
+									},
+									{
+										"id": 11174,
+										"uuid": "UUHI4MQWY2vPMBwT",
+										"student": {
+											"id": 747,
+											"full_name": "Farrux Xudoyberdiyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2274,
+										"amount": 2274,
+										"type": 100
+									},
+									{
+										"id": 13050,
+										"uuid": "bEt7kR4RDymdtynH",
+										"student": {
+											"id": 1696,
+											"full_name": "Shahzod Mirzayev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2239,
+										"amount": 2239,
+										"type": 100
+									},
+									{
+										"id": 10893,
+										"uuid": "fn3msOVe8aDXLFPC",
+										"student": {
+											"id": 613,
+											"full_name": "Samandar Subanov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2222,
+										"amount": 2222,
+										"type": 100
+									},
+									{
+										"id": 10439,
+										"uuid": "_dDwJU9Q1VUwMs_t",
+										"student": {
+											"id": 369,
+											"full_name": "Behruz Ibragimov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2222,
+										"amount": 2222,
+										"type": 100
+									},
+									{
+										"id": 17190,
+										"uuid": "GJ_M6FboSncX85db",
+										"student": {
+											"id": 4996,
+											"full_name": "Muslima Nematova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/SHc8FvGHlNeqeoaKaiwiohgppbPAIac1.jpg",
+											"themes": []
+										},
+										"points": 2222,
+										"amount": 2222,
+										"type": 100
+									},
+									{
+										"id": 10472,
+										"uuid": "DDoIZQ_MDu2dxHHM",
+										"student": {
+											"id": 380,
+											"full_name": "Xurshid Ostonov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2218,
+										"amount": 2218,
+										"type": 100
+									},
+									{
+										"id": 16529,
+										"uuid": "IEQWwJXMkW5UiYXb",
+										"student": {
+											"id": 4490,
+											"full_name": "Sayyora Afzalova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2203,
+										"amount": 2203,
+										"type": 100
+									},
+									{
+										"id": 11832,
+										"uuid": "9QdTfXIiz1yWD4LI",
+										"student": {
+											"id": 1074,
+											"full_name": "Ali Qodirov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2181,
+										"amount": 2181,
+										"type": 100
+									},
+									{
+										"id": 13859,
+										"uuid": "Ep_ybyluOcKfpT8u",
+										"student": {
+											"id": 2361,
+											"full_name": "?ⲏⲙɑᑯᴊ૦ⲛ  ?ɑઽⲏɪᑯ૦ν",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/yXuk9_hZxsPJkComY5eZ3mCbK73I4Y29.jpg",
+											"themes": []
+										},
+										"points": 2180,
+										"amount": 2180,
+										"type": 100
+									},
+									{
+										"id": 13274,
+										"uuid": "te356GxoLUkf2MF2",
+										"student": {
+											"id": 1850,
+											"full_name": "Nigora Karimova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2179,
+										"amount": 2179,
+										"type": 100
+									},
+									{
+										"id": 15976,
+										"uuid": "8doRgcSeXNzm2wsv",
+										"student": {
+											"id": 1641,
+											"full_name": "Bobur Tohirov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2177,
+										"amount": 2177,
+										"type": 100
+									},
+									{
+										"id": 16641,
+										"uuid": "LQBIzC1srd0uIrqo",
+										"student": {
+											"id": 4571,
+											"full_name": "Oybek Xudoyberdiyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2153,
+										"amount": 2153,
+										"type": 100
+									},
+									{
+										"id": 10010,
+										"uuid": "0AWY6ikQl2E2Q5E4",
+										"student": {
+											"id": 3157,
+											"full_name": "Zulfiya Lutfullayeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2121,
+										"amount": 2121,
+										"type": 100
+									},
+									{
+										"id": 10447,
+										"uuid": "n54b1DdJQZnJ9WCQ",
+										"student": {
+											"id": 371,
+											"full_name": "Mirzaodil Mirzakhmedov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/W6xiEoDyAuGlAb9j3Xvs4x-hTDVN2paj.jpg",
+											"themes": []
+										},
+										"points": 2116,
+										"amount": 2116,
+										"type": 100
+									},
+									{
+										"id": 12065,
+										"uuid": "tG5BvdupSY8Ph_sl",
+										"student": {
+											"id": 1187,
+											"full_name": "Saidxon Valiyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2101,
+										"amount": 2101,
+										"type": 100
+									},
+									{
+										"id": 11942,
+										"uuid": "aJ1FIL9mdLSmbacc",
+										"student": {
+											"id": 1125,
+											"full_name": "Sitora Baratova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2071,
+										"amount": 2071,
+										"type": 100
+									},
+									{
+										"id": 12592,
+										"uuid": "GfocRKmCz8hOufPl",
+										"student": {
+											"id": 1454,
+											"full_name": "Sarvinoz Qodirova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2070,
+										"amount": 2070,
+										"type": 100
+									},
+									{
+										"id": 15527,
+										"uuid": "IxG75mA2uidJ6osQ",
+										"student": {
+											"id": 3665,
+											"full_name": "Sherzodbek Qambaraliyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/esclFAxAfTuy6IIyKIriyUyLDUnJ_GgJ.jpg",
+											"themes": []
+										},
+										"points": 2058,
+										"amount": 2058,
+										"type": 100
+									},
+									{
+										"id": 15214,
+										"uuid": "p93vqmWXMzQTEcV1",
+										"student": {
+											"id": 3448,
+											"full_name": "Sa'dullo Bahodirov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2048,
+										"amount": 2048,
+										"type": 100
+									},
+									{
+										"id": 11972,
+										"uuid": "y5lxRyf9zjmoQrly",
+										"student": {
+											"id": 1142,
+											"full_name": "Zafar Qodirov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 2036,
+										"amount": 2036,
+										"type": 100
+									},
+									{
+										"id": 15616,
+										"uuid": "Mzkf5zOhnBKbcHue",
+										"student": {
+											"id": 3729,
+											"full_name": "Aisha Anvarova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/y8MB4QWwLiD6W9KbPCaPKgcBhQVMliyW.jpg",
+											"themes": []
+										},
+										"points": 2015,
+										"amount": 2015,
+										"type": 100
+									},
+									{
+										"id": 12615,
+										"uuid": "bAFFoX6ak4zoJI6k",
+										"student": {
+											"id": 1468,
+											"full_name": "Kristina Malova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2008,
+										"amount": 2008,
+										"type": 100
+									},
+									{
+										"id": 17609,
+										"uuid": "qX4EsNuwkdAiTbNZ",
+										"student": {
+											"id": 5263,
+											"full_name": "Muxlisa Mirzamuhamedova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 2002,
+										"amount": 2002,
+										"type": 100
+									},
+									{
+										"id": 11856,
+										"uuid": "uLmU3ByeBBWEUSMr",
+										"student": {
+											"id": 1088,
+											"full_name": "Mahmuda Qodirova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1978,
+										"amount": 1978,
+										"type": 100
+									},
+									{
+										"id": 16418,
+										"uuid": "WNSP5pUni99_4nHQ",
+										"student": {
+											"id": 4385,
+											"full_name": "Maftuna Sultonova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1970,
+										"amount": 1970,
+										"type": 100
+									},
+									{
+										"id": 12159,
+										"uuid": "Rvl_KTmf3RakP3Yx",
+										"student": {
+											"id": 1237,
+											"full_name": "Azizaxon Obidxo'jaeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1953,
+										"amount": 1953,
+										"type": 100
+									},
+									{
+										"id": 11142,
+										"uuid": "KgCCLy2n8O75fhLK",
+										"student": {
+											"id": 732,
+											"full_name": "Asadbek Tursunboyev",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 1924,
+										"amount": 1924,
+										"type": 100
+									},
+									{
+										"id": 11727,
+										"uuid": "o5tTnqiveYdylcOR",
+										"student": {
+											"id": 1021,
+											"full_name": "Sarvinoz Abdualimova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1920,
+										"amount": 1920,
+										"type": 100
+									},
+									{
+										"id": 14565,
+										"uuid": "1kK1wbJDvfvZybK6",
+										"student": {
+											"id": 3019,
+											"full_name": "Elnora Rashidova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1915,
+										"amount": 1915,
+										"type": 100
+									},
+									{
+										"id": 16600,
+										"uuid": "BSEjRILpzac2Jv5Q",
+										"student": {
+											"id": 4032,
+											"full_name": "Bexruz Shomurodov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/1/HuGss0rDYYJzzhDdBLei9GGZtdgMmTMy.jpg",
+											"themes": []
+										},
+										"points": 1909,
+										"amount": 1909,
+										"type": 100
+									},
+									{
+										"id": 11322,
+										"uuid": "VyO2k_p48Fon0G_f",
+										"student": {
+											"id": 835,
+											"full_name": "Olamgir Ibrohimov",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+											"themes": []
+										},
+										"points": 1904,
+										"amount": 1904,
+										"type": 100
+									},
+									{
+										"id": 13324,
+										"uuid": "P8NqL8Kf5zsF5j3W",
+										"student": {
+											"id": 1884,
+											"full_name": "Gavxar Ishankulova",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1886,
+										"amount": 1886,
+										"type": 100
+									},
+									{
+										"id": 11045,
+										"uuid": "GxnNa78lhruL4Ny_",
+										"student": {
+											"id": 686,
+											"full_name": "Shahzodabonu Eshmirzayeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1875,
+										"amount": 1875,
+										"type": 100
+									},
+									{
+										"id": 17437,
+										"uuid": "Sy57KaB4lybDIl0w",
+										"student": {
+											"id": 5175,
+											"full_name": "Munisa Saparbaeva",
+											"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/female.png",
+											"themes": []
+										},
+										"points": 1868,
+										"amount": 1868,
+										"type": 100
+									}
+								],
+								"self": {
+									"id": 9887,
+									"uuid": "73LYW3d3n05fxFTc",
+									"student": {
+										"id": 26,
+										"full_name": "Joshqin ",
+										"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+										"themes": []
+									},
+									"points": 1472,
+									"amount": 1472,
+									"type": 100,
+									"position": 149
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "GET medals info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/public-profile/view?id=28",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"public-profile",
+								"view"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "28"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": {
+								"user_id": "28",
+								"profile": {
+									"full_name": "Hoshimjon Ro'ziyev",
+									"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"order": 3,
+										"level_group": 5,
+										"parent_id": null,
+										"status": 1,
+										"course_id": 1
+									},
+									"point": 14,
+									"themes": []
+								},
+								"achievements": [],
+								"medals": [],
+								"battle_statistics": {
+									"wins": 0,
+									"looses": 0
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "GET levels",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/level",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"level"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"level": "Starter",
+									"value": -1
+								},
+								{
+									"level": "Beginner",
+									"value": 1
+								},
+								{
+									"level": "Elementary",
+									"value": 2
+								},
+								{
+									"level": "Pre-Intermediate",
+									"value": 3
+								},
+								{
+									"level": "Intermediate",
+									"value": 4
+								},
+								{
+									"level": "Upper-Intermediate",
+									"value": 5
+								},
+								{
+									"level": "IELTS",
+									"value": 6
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "podcasts",
+			"item": [
+				{
+					"name": "GET list of podcasts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/podcasts",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"podcasts"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"id": 72,
+									"name": "The Missing Masaccio",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/JOZcSHqg5jY?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 73,
+									"name": "The True Story of a LEPster’s Waking Nightmare (and how LEP came to the rescue) Email Story",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 19,
+										"name": "Documentary"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/v62Vlkx4qtU?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 74,
+									"name": "P35 StoryTime: Learn English with Stories (free LEP Premium Sample) THE BEAR STORY",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 9,
+										"name": "Pre-Intermediate 3",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/7Pk2wN8APes?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 75,
+									"name": " Sir Gawain and The Green Knight (by Simon Armitage) Poetry Reading",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/1VZ7ub7HQ5s?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 76,
+									"name": "Camp Stabbiwaka by Peter Carlson (Learn English with a Scary Story)",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/klZPB3Nnq1M?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 77,
+									"name": "The Escaped Man (Short Story for Learners of English) Vocabulary & Grammar",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/mLKqMEynYzo?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 78,
+									"name": "The Umbrella Man by Roald Dahl (Learn English with a Short Story)",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/Fxm1vTW5jdg?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 79,
+									"name": "The War of the Worlds by H.G. Wells [Part 1] Learn English with Stories",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/8gkut_C0R2Q?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 80,
+									"name": "The War of the Worlds by H.G. Wells [Part 2] Learn English with Stories",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/Y0QyrM0O09c?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 81,
+									"name": "The War of the Worlds by H.G. Wells [Part 3] Learn English with Stories",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/_hizHFriOX4?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 82,
+									"name": "[1/2] Let's Play Another Text Adventure Game - \"Zombolocaust\" by Peter Carlson",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 20,
+										"name": "Education"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/YCPwEDlzmOo?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 83,
+									"name": "[2/2] Let's Play Another Text Adventure Game - \"Zombolocaust\" by Peter Carlson",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 19,
+										"name": "Documentary"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/6SsQYURFdvo?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 84,
+									"name": "Did Amber really do this? The Lying Game with Amber & Paul [LEP436]",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 19,
+										"name": "Documentary"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/SZGLyOuxFbU?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 85,
+									"name": "Did Luke meet Dave Grohl at a Japanese temple? The Lying Game with Amber & Paul ",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 19,
+										"name": "Documentary"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/8_Lnr-l9M_Y?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 86,
+									"name": "FIND 85 VERB + PREPOSITION Collocations / Improvised Story for Learners of English",
+									"description": "",
+									"file": null,
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 19,
+										"name": "Documentary"
+									},
+									"created_at": null,
+									"src": "https://youtu.be/MoeETMXV9I4?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+									"likes_count": 0,
+									"views_count": 0
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET podcast by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/podcast/84",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"podcast",
+								"84"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": {
+								"id": 84,
+								"name": "Did Amber really do this? The Lying Game with Amber & Paul [LEP436]",
+								"description": "",
+								"file": null,
+								"level": {
+									"id": 15,
+									"name": "Upper-Intermediate 3",
+									"cefr_name": "B2"
+								},
+								"category": {
+									"id": 19,
+									"name": "Documentary"
+								},
+								"created_at": null,
+								"src": "https://youtu.be/SZGLyOuxFbU?list=PLAy2UiT23ET1dluRcto9nceKyWsSL5mzO",
+								"likes_count": 0,
+								"views_count": 0
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "GET list of movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/movies",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"id": 1,
+									"name": "The Karate Kid",
+									"description": "Dre, a young boy, finds himself bullied by Cheng, a rebellious kung fu prodigy at his school. However, things change after he befriends Mr Han, a maintenance man, who happens to be a kung fu expert.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/xHbhNuiV2U_GkjHqfDJ8g2U3IWYqZNat.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_1_the_karate_kid/TRKyawvyNXdOIoLVloLmytyIRSOmgbuUUTqXGMX1.m3u8",
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 2,
+									"name": "Zathura: A Space Adventure",
+									"description": "Two young brothers find themselves transported into the depths of space while playing a board game. They try their best to find their way back to the Earth.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/qXI5IoMMl2qUSSaoJqLALWG8mOqrbuAZ.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_2_zathura/8EqE9WcBPCmK3D5NErAg6QdQyzHjDsNdjfF3kRCa.m3u8",
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 7,
+										"name": "Science fiction"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 3,
+									"name": "Yes Man",
+									"description": "After attending a self-help seminar, Carl decides to say yes to everything in life to let go of his negativity. However, he learns that too much of positivity isn't that great either.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/0nAdN8us2iOBdR13hS8PgNtwkYksi7Th.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_3_yes_men.mkv/kYChlAh6he3fQgM5DTritK8fmoEqeNTbwsucSHlI.m3u8",
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 6,
+										"name": "Romance"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 4,
+									"name": "Spider-Man: Homecoming",
+									"description": "Peter Parker tries to stop Adrian 'The Vulture' Toomes from selling weapons made with advanced Chitauri technology while trying to balance his life as an ordinary high school student.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/jy2f6_IAIAO3GlNbwsxj91y63Gr5tyPe.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_4_spider_man_homecoming/GagcF1gDjxQhVwFTi2LRDmZzGdybcfaHyEpLrekE.m3u8",
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 3,
+										"name": "Comedy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 5,
+									"name": "Spider-Man: Far From Home",
+									"description": "Peter Parker, the beloved superhero Spider-Man, faces four destructive elemental monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow hero with mysterious origins.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/956vvCinlRS42FvXW_Ao782Yw4B3vqr3.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_5_spider_man_far_from_home/eOOgE6rQv3gCDBULGEx1dYVjYadDDv3di8Tsc3co.m3u8",
+									"level": {
+										"id": 5,
+										"name": "Elementary 2",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 6,
+									"name": "Spider Man No Way Home",
+									"description": "",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/4knLS8vC6n4WJiFo7XfPAxTzOz_uk8di.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_7_spider_man_no_way_home/Naw9kkm0vDl6KOhRcUn4LRIEcuuSbn4QDGTvHCsz.m3u8",
+									"level": {
+										"id": 5,
+										"name": "Elementary 2",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 7,
+									"name": "Three Wishes for Cinderella",
+									"description": "Cinderella is living with her evil stepmother and her spoiled stepsister. During a walk in the snow-heavy forest, she meets the kingdom's handsome prince, who is soon going to choose a girl as his bride at the palace ball.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/_tpF5D4jfI8b8cP2IAiJlpGMGbOMl8MR.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_8_three_wishes_for_cinderella/PDUN2JD7scGO7irZCiEnK34yV4bLxXGitAlujb2o.m3u8",
+									"level": {
+										"id": 5,
+										"name": "Elementary 2",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 8,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 8,
+									"name": "Aladdin",
+									"description": "Aladdin, a kind thief, woos Jasmine, the princess of Agrabah, with the help of Genie. When Jafar, the grand vizier, tries to usurp the king, Jasmine, Aladdin and Genie must stop him from succeeding.",
+									"file": null,
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_9_aladdin/iDczm23t9vGcWh1EQrAEy6CiqosQlMbrTGCZ2rnQ.m3u8",
+									"level": {
+										"id": 5,
+										"name": "Elementary 2",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 8,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 9,
+									"name": "Nobody",
+									"description": "Hutch Mansell finds his life changed when a few thieves break into his house. While trying to punish the thieves, he ends up earning the wrath of a crime lord, Yulian, after he attacks his brother.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/PT1AdZn61OeEIpBbZTutLGPbaVgzKf0v.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_10_nobody/7p2hgno3VE6BQv7uYC5U3dL7bBnFKe97y3OinMOO.m3u8",
+									"level": {
+										"id": 6,
+										"name": "Elementary 3",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 10,
+									"name": "Bridge to Terabithia",
+									"description": "A rich city girl, Leslie, and a poor country boy, Jess, create Terabithia, a land of magical beings, and become its rulers. This helps Jess to escape and cope with a tragedy.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/_R1ueslGSjlryEPdbge5lu5nbig2p7we.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_1_bridge_to_terabithia/SRrCVQkykZqFuzcRHpp4CDs6JkmTBfcmdcVwABGc.m3u8",
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 11,
+									"name": "Uncharted",
+									"description": "Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/zBBvTStmUZXpI9FBJLGn_sT9On195iyf.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_2_uncharted/S8XNhWXqd3hCT2K4MvQARzekfwPtAXvoljEE26zJ.m3u8",
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 12,
+									"name": "Now You See Me",
+									"description": "The Horsemen, a group of four street magicians, are chased by FBI agent Dylan Rhodes and Interpol agent Alma Dray after they rob a huge sum of money that belongs to insurance magnate Arthur Tressler.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/NB7Nwuqm5d1b4JdAHRVUGn86CfjAUH68.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_3_now_you_see_me/3nk6dAouYp6BpxMi1TNWExUQ5dK1rG5ILFQ33jMc.m3u8",
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 13,
+									"name": "Murder On The Orient Express",
+									"description": "After the Orient Express gets derailed by an avalanche, Edward Ratchett is found dead with multiple stab wounds. Detective Hercule Poirot must solve the case before the killer strikes again.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/zxlMK9qJm1svWKqJZsCrgIwr8L5kesxo.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_4_murder_on_the_orient_express/Jr1GLHUBUpO9ShWYT7eYRgdhAwU4eXTyrNoMMxOy.m3u8",
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 14,
+									"name": "The Secret Life of Walter Mitty",
+									"description": "A man living a dull life dreams up romantic and action-filled scenarios in order to escape from monotony. When his own job is threatened, he sets out on a real romantic and action-packed journey.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/P6KSebWg-cups6av0WiL2eP78_ewoOQ7.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_5_life_of_walter_mitty/EWHiT2DT4q7Fm9RPVB6imKQKOMQR3ldEkMcrybDG.m3u8",
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 15,
+									"name": "Now You See Me 2",
+									"description": "The Four Horsemen, a group of illusionists, find themselves in Macau, China, planning to pull off a robbery on the orders of a devious technology genius.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/SMUvHpb7SFczaeFdQ4OmgNckp6VEWc4l.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_7_now_you_see_me_2/TzNixs9KIWt9jkyTyl3oD8lBTPFGV1XCvoHPYilL.m3u8",
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 16,
+									"name": "San Andreas",
+									"description": "Following a massive earthquake, Ray, a rescue-chopper pilot, and his estranged wife try to find and save their daughter before another disaster strikes.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/sLDCOdI1kQ7NcNoCdtX8eIVlOWMdJPdI.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_8_san_andreas/YyunfoHxjN5Jtl8AbfjLafer9vYVjdJ0WCIsAofa.m3u8",
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 7,
+										"name": "Science fiction"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 17,
+									"name": "Wonder",
+									"description": "August, a boy who suffers from facial deformity, enters a private school in fifth grade. He endures bullying from his peers but finds a way to overcome them with his friends and family.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/RZEFwzmY9lbiJmsVbjjlxipsUWY7sLAt.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_9_wonder/CQs0K3LuRBMM40xHkFiQaTjLWHsOb0eOuk5gUPd3.m3u8",
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 18,
+									"name": "Ford v Ferrari",
+									"description": "Carroll Shelby, an automotive designer, and Ken Miles, a race car driver, join hands to build a trailblazing vehicle and compete against the Ferrari race cars.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/OL14CPZkmtKxJ_N_dpPlmrlV_sxgBA_T.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_10_ford_vs_ferrari/7KAnzoBeb2uMFUSy6OW6DHCidZ8wH7Fgbqvyw41u.m3u8",
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 19,
+									"name": "Death on the Nil",
+									"description": "Belgian sleuth Hercule Poirot's Egyptian vacation aboard a glamorous river steamer turns into a terrifying search for a murderer when a picture-perfect couple's idyllic honeymoon is tragically cut short.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/cBP6p2CjcxAXazQV49nOJ5BiDeegWuIv.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/intermediate_unit_11_death_on_the_nile/FeSLydnjgqTZbaZOWoBSoEP3ev1VzRmpwVL8efHG.m3u8",
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 52,
+									"name": "Abduction",
+									"description": "A young man's world turns upside down when he learns that he was adopted as a child. However, just as he tries to confront his family about the matter, he finds himself on the run from mysterious men.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/UOTe8EFlssX9x7h9IHqTmC1iCXbvdIsW.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intemediate_unit_1_abduction/KFmNL1KlYWbANWHzzjhaVyOgooiMXo8QanKqNNNP.m3u8",
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 53,
+									"name": "Mulan",
+									"description": "When her father is unable to join the army due to his old age, Mulan, a young woman, decides to disguise herself as a man and takes his place instead.\r\n",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/lATDMYFzFSHexnjW6pKF4k4_bAPtdgZL.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_2_mulan/gnSiyIWv7sDPG2t2ogAUtIgZv7R0T56cnO7tzTkO.m3u8",
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 54,
+									"name": "Interstellar",
+									"description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/sbS6pqSCBl5FhprJwpMvQ53RE1oYvtCR.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_3_interstellar/NL6GjVUL0iqZi5FDiaml32qAvhqLwdfBrcl9201d.m3u8",
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 7,
+										"name": "Science fiction"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 55,
+									"name": "Free Guy",
+									"description": "Guy lives a seemingly peaceful life as a bank teller. However, an encounter with a pretty but mysterious woman makes him realise that he is a non-playable character in a massive online video game.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/TanUA9jDdr7FnJRNUTFp_HKSGbSk7p2t.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_4_free_guy/pEcd2bXJYzSdwQ6WMLtbgumblGxvsr1rAoodYa74.m3u8",
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 56,
+									"name": "Tower Heist",
+									"description": "A group of hardworking men fall prey to a scam conspired by a wealthy businessman. Furious and desperate for revenge, they come together and plan a heist against him. Will they be able to succeed?",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/JHo7q0oCaSyy19sP2zgJ4ugf1RNxCaJX.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_5_tower_heist/ukbDfOcoNvtKbc5aa1Q8VU24HfRLjfTuBoEy8PCp.m3u8",
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 3,
+										"name": "Comedy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 57,
+									"name": "Jurassic World",
+									"description": "A theme park showcasing genetically-engineered dinosaurs turns into a nightmare for its tourists when one of the dinosaurs escapes its enclosure. An ex-military animal expert steps up to save the day.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/vaPrqT3DTR79Qio-0Wc5W6xv8L0jWOg8.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_7_jurassic_world/2YBK39BOoB8UYwJq7Ir070rspA6g1EI2gzfwgatz.m3u8",
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 8,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 58,
+									"name": "Jurassic World Fallen Kingdom",
+									"description": "After a volcano eruption proves to be a threat for the dinosaurs, Owen and Claire reach the defunct Jurassic World, a theme park, to save the animals from extinction",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/V6RtIGywI2-K6nuGWwQGQ3GeNAtp1GKv.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_8_jurassic_world_fallen_kingdom/xE2szOz1c3QuL6c6Gcxd4TxG86ynKa2CdFEad4Ry.m3u8",
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 8,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 59,
+									"name": "Mr. Popper's Penguins",
+									"description": "When Tom Popper's father dies in Antarctica, he inherits six penguins. Tom initially decides to give them away, but his children think they are a birthday present and he is forced to keep them.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/Z_vlETs6gWGoWbp4o7f_Cgvukcv4rHq3.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_9_mr_poppers_penguins/eJKGhtEYKtMqOdm7w5JY80Izyi6Bsirm2SDxWUfS.m3u8",
+									"level": {
+										"id": 9,
+										"name": "Pre-Intermediate 3",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 3,
+										"name": "Comedy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 60,
+									"name": "Night at the Museum",
+									"description": "Larry, a night security guard at the Museum of Natural History, gets some help from the exhibits who come alive at night to foil a robbery attempt of a magic tablet and proves that he is not a loser.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/3USJrPzYroRAvKzaxoGmeoTF0-ZggPRB.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_10_night_at_the_Museum/MbUf5CrWlRs1NxM2Y60eDx6ewFkh2g4pRar3Y8X3.m3u8",
+									"level": {
+										"id": 9,
+										"name": "Pre-Intermediate 3",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 8,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 61,
+									"name": "Night at the Museum: Battle of the Smithson",
+									"description": "Larry, the security guard of the Smithsonian Institution Museum, must gain access to the museum in order to rescue Jedediah and Octavius, who have been shipped to the museum by mistake.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/KjZe8yci9_I1wdFFdwXx51GXLiVWprUs.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/pre_intermediate_unit_11_night_at_the_museum_battle_of_the_smithsonian/7wcKpXbZjX6He1eMjPKUFPt4r8FMzurx9B7xshZT.m3u8",
+									"level": {
+										"id": 9,
+										"name": "Pre-Intermediate 3",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 8,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 62,
+									"name": "The Ron Clark Story",
+									"description": "A restless but gifted young teacher leaves his home in North Carolina to seek adventure and a job in the bright lights and tough schools of New York City. Will he make the difference he dreams of ?",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/zJfRzsW22QAG50EBNgfulJqqmXO44QfZ.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_1_the_ron_clark_story/DEx5e3ZQw7xBbkBBOkVR8a97OHv5pExOMQPSpoIi.m3u8",
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 63,
+									"name": "Jungle Cruise",
+									"description": "Dr Lily Houghton, a researcher, and her brother team up with Frank, a skipper, to locate a mystical tree in the Amazon. However, they are pursued by evil entities lusting after immortality.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/PPcMORvGEmPs3ai9xwO7g9w0jmhxjeG7.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_2_jungle_cruise/bluPubSEWNoWLeMEnzaVqpoGuC8XvjIaQJPde0Df.m3u8",
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 64,
+									"name": "Going in Style",
+									"description": "Joe, Willie and Albert, three lifelong friends, plan to rob the bank that swindled them out of their pension money in order to come through for themselves and their loved ones.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/ELRxAnMiODRtR4-IPMvBB_dITSZFNFBH.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_3_going_in_style/I1aMGweU42ySOnQAsCGP5PheGBZO3W4cVaV4m91j.m3u8",
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 1,
+										"name": "Action"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 65,
+									"name": "Father of Invention",
+									"description": "Synopsis. Robert Axle, a New Orleans-based infomercial guru, loses it all when one of his inventions maims thousands of customers. After eight years in a maximum-security prison, Axle is ready to redeem his name and rebuild his billion-dollar empire.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/NSxbwLKj8D1HS9oQ3FwZVheyneuDRrLJ.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_4_father_of_invention/awngjYhc5g6PA8k68PTUqpl7dO7PaaU0POATXxIl.m3u8",
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 3,
+										"name": "Comedy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 66,
+									"name": "The Prestige",
+									"description": "Two friends and fellow magicians become bitter enemies after a sudden tragedy. As they devote themselves to this rivalry, they make sacrifices that bring them fame but, with terrible consequences.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/5FJYAB96P7N1Eat7noZbnBFjhuO7DiBO.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_5_the_prestige/uzaX9aHT3xxPIw0vWGokpOIl8Da04Hcy3ImTYLBz.m3u8",
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 67,
+									"name": "Holes",
+									"description": "Elya Yelnats forgets to repay the gypsy Madame Zeroni. His family is cursed with bad luck for eternity. When Stanley Yelnats IV steals a baseball player's cleats, he is sent to Camp Green Lake.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/w-wwQKB2P9pXZfi3z4WM5FcTeWp7N_3h.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_7_holes/A6TY1zROZD6vBc5y6dYmhNkVN12Xi86tCo1TJZ8O.m3u8",
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 2,
+										"name": "Adventure"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 68,
+									"name": "The Truman Show",
+									"description": "An insurance salesman is oblivious of the fact that his entire life is a TV show and his family members are mere actors. As he starts noticing things and uncovers the truth, he decides to escape.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/oVCo0k6hZkZ-huvXjCwCz3BfIF3caxdN.jpg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_8_the_truman_show/NuG9rqTrpE45BSDy4iTDrw78BHV4n3T0inWy1ftZ.m3u8",
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 69,
+									"name": "The Book of Henry",
+									"description": "When Henry, a young genius boy, notices that his classmate Christina is being abused by her stepfather, he creates a plan to rescue her.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/3Fg_WW53VEW_4_m4bixyczjAp8NwnOAQ.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_9_the_book_of_henry/lvMazAE8hT7nyich2DgYkYv2037gc0GBv03sr8ka.m3u8",
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 70,
+									"name": " The War with Grandpa",
+									"description": "When Peter's grandfather moves in with his family, he is forced to give up his bedroom. Disgruntled, he declares war, forcing the grandfather-grandson duo to try to outwit each other.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/kFpYYHzzcALB6rxrpGPbEHY3sGoa88_S.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_10_the_war_with_grandpa/n1GLmdjJnIkBV6GFMr5cRANt8rKy4UVuDC9pZaWg.m3u8",
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 3,
+										"name": "Comedy"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 71,
+									"name": "Gladiator",
+									"description": "\r\nCommodus takes over power and demotes Maximus, one of the preferred generals of his father, Emperor Marcus Aurelius. As a result, Maximus is relegated to fighting till death as a gladiator.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/Exo5GrUwCj7VqJDBXljLr0fJwy0f52S8.jpeg",
+									"src": "https://df5ralxb7y7wh.cloudfront.net/upper_intermediate_unit_11_gladiator/BjLtP80yFWfLXR6CCDJMVLd5pmHQeQzyXMDGDXn5.m3u8",
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 4,
+										"name": "Drama"
+									},
+									"created_at": null,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET movies by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/movie/1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": {
+								"id": 1,
+								"name": "The Karate Kid",
+								"description": "Dre, a young boy, finds himself bullied by Cheng, a rebellious kung fu prodigy at his school. However, things change after he befriends Mr Han, a maintenance man, who happens to be a kung fu expert.",
+								"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/xHbhNuiV2U_GkjHqfDJ8g2U3IWYqZNat.jpg",
+								"src": "https://df5ralxb7y7wh.cloudfront.net/elementary_unit_1_the_karate_kid/TRKyawvyNXdOIoLVloLmytyIRSOmgbuUUTqXGMX1.m3u8",
+								"level": {
+									"id": 4,
+									"name": "Elementary 1",
+									"cefr_name": "A2"
+								},
+								"category": {
+									"id": 1,
+									"name": "Action"
+								},
+								"created_at": null,
+								"duration": "02:48:24",
+								"likes_count": 0,
+								"liked": false,
+								"views_count": 0
+							}
+						}
+					]
+				},
+				{
+					"name": "GET comments on movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/comments?resource_id=1",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "resource_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"id": 2,
+									"text": "aaaaaaaaaaaaaaaaaaaa",
+									"likes_count": 0,
+									"created_at": "2025-09-06 17:48:34",
+									"student": {
+										"id": 28,
+										"uuid": "_2zabQjb3uCJ6AUJ",
+										"fullname": "Hoshimjon Ro'ziyev",
+										"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+										"themes": []
+									},
+									"liked": false
+								},
+								{
+									"id": 1,
+									"text": "asdadasdasd",
+									"likes_count": 12,
+									"created_at": "2025-09-06 17:35:25",
+									"student": {
+										"id": 26,
+										"uuid": "73LYW3d3n05fxFTc",
+										"fullname": "Joshqin ",
+										"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+										"themes": []
+									},
+									"liked": false
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "books & exclusive",
+			"item": [
+				{
+					"name": "GET list of books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/books",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"id": 20,
+									"name": "The alchemist",
+									"description": "\"The Alchemist\" by Paulo Coelho:\r\nSantiago's journey in search of a hidden treasure provides profound insights into destiny and personal legend.",
+									"file": null,
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 11,
+										"name": "Comedy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/_OceanofPDF.com_The_Alchemist.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 21,
+									"name": "The Diary of a Young Girl",
+									"description": "\"The Diary of a Young Girl\" by Anne Frank:\r\nAnne Frank's poignant diary recounts her experiences hiding from the Nazis during World War II.",
+									"file": null,
+									"level": {
+										"id": 13,
+										"name": "Upper-Intermediate 1",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 11,
+										"name": "Comedy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/frank_diary.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 22,
+									"name": "Eragon",
+									"description": "\"Eragon\" by Christopher Paolini:\r\nEmbark on an epic fantasy adventure with a young farm boy named Eragon and his dragon, Saphira.",
+									"file": null,
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Eragon.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 23,
+									"name": "The Hunger Games",
+									"description": "\"The Hunger Games\" by Suzanne Collins:\r\nJoin Katniss Everdeen in a dystopian society where teenagers are chosen to participate in a deadly televised competition.",
+									"file": null,
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 11,
+										"name": "Comedy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/hunger-games-18.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 24,
+									"name": "Mieko and the Fifth Treasure by Eleanor Coerr",
+									"description": "Mieko and the Fifth Treasure by Eleanor Coerr:\r\nThis book is aimed at young native English speakers, so if you’re learning English, the level won’t be so difficult. This book will keep you interested as you’ll learn many interesting things about Japan and its culture.",
+									"file": null,
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 11,
+										"name": "Comedy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/mieko.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 25,
+									"name": "Officially Dead by RichardPrescott",
+									"description": "Officially Dead by RichardPrescott:\r\nWhen Colin Fenton is offered a large sum of money to carry out a job, he believes it is an easy solution to fix his struggling business. However, the job goes wrong and Colin loses his identity, leaving his wife to try to prove whether he is officially dead.",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 16,
+										"name": "Horror"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/all+levels+-Richard-Prescott-Officially-Dead.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 26,
+									"name": "The Mouse and the Motorcycle ",
+									"description": "The Mouse and the Motorcycle by Beverly Cleary\r\nJoin Ralph, a mouse with a love for adventure, as he befriends a boy and explores the world of humans with a tiny motorcycle.",
+									"file": null,
+									"level": {
+										"id": 2,
+										"name": "Beginner 2",
+										"cefr_name": "A1"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Mouse_Motorcycle.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 27,
+									"name": "The Enormous Crocodile ",
+									"description": "The Enormous Crocodile by Roald Dahl:\r\nJoin the Enormous Crocodile on his mischievous quest to eat children, and follow the clever animals who outsmart him.",
+									"file": null,
+									"level": {
+										"id": 3,
+										"name": "Beginner 3",
+										"cefr_name": "A1"
+									},
+									"category": {
+										"id": 11,
+										"name": "Comedy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Roald-Dahl-The-Enormous-Crocodile.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 28,
+									"name": "The Wind in the Willows",
+									"description": "The Wind in the Willows by Kenneth Grahame:\r\nFollow the charming adventures of Mole, Rat, Toad, and Badger as they explore the English countryside and face various escapades.",
+									"file": null,
+									"level": {
+										"id": 3,
+										"name": "Beginner 3",
+										"cefr_name": "A1"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/The+Wind+in+The+Willows.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 29,
+									"name": "The Adventures of Frog and Toad ",
+									"description": "The Adventures of Frog and Toad by Arnold Lobel:\r\nJoin the delightful Frog and Toad in their heartwarming adventures, showcasing the joys and challenges of friendship.",
+									"file": null,
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/lobel-frog-toad.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 30,
+									"name": "The Hardy Boys",
+									"description": "The Hardy Boys series by Franklin W. Dixon:\r\nFollow the daring adventures of brothers Frank and Joe Hardy as they solve mysteries and face thrilling challenges.",
+									"file": null,
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 16,
+										"name": "Horror"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/001_the_tower_treasure.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 31,
+									"name": "The Mysterious Benedict Society ",
+									"description": "The Mysterious Benedict Society by Trenton Lee Stewart:\r\nJoin a group of gifted children on a mission to save the world, solving puzzles and facing mind-bending challenges.",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/The_Mysterious_Benedict_Society_trenton_lee_stewart_book_100082.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 32,
+									"name": "The Secret Garden by Frances Hodgson Burnett",
+									"description": "The Secret Garden by Frances Hodgson Burnett:\r\nFollow Mary Lennox's journey as she discovers a hidden, magical garden and transforms the lives of those around her.",
+									"file": null,
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 16,
+										"name": "Horror"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/The_Secret_Garden_by_Frances_Hodgson_Burnett.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 33,
+									"name": "Stuart Little ",
+									"description": "Stuart Little by E.B. White:\r\nJoin Stuart Little, a small mouse with a big heart, on his adventurous journey through the world of humans and animals.",
+									"file": null,
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Stuart_Little.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 34,
+									"name": "Charlotte's Web ",
+									"description": "Charlotte's Web by E.B. White:\r\nDiscover the enduring friendship between a pig named Wilbur and a spider named Charlotte.",
+									"file": null,
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Charlottes_web.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 35,
+									"name": "Diary of a Wimpy Kid ",
+									"description": "Diary of a Wimpy Kid series by Jeff Kinney:\r\nLaugh along with Greg Heffley's humorous and relatable middle school escapades.",
+									"file": null,
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/books-library.online-01100853Kq6E0.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 36,
+									"name": "The Magic Tree House",
+									"description": "The Magic Tree House series by Mary Pope Osborne:\r\nSiblings Jack and Annie embark on magical adventures through time and space in a mysterious treehouse.",
+									"file": null,
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Magic_Tree_House.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 37,
+									"name": "Nate the Great",
+									"description": "Nate the Great series by Marjorie Weinman Sharmat:\r\nJoin detective Nate as he solves mysteries with his trusty dog, Sludge, using wit and observation.",
+									"file": null,
+									"level": {
+										"id": 7,
+										"name": "Pre-Intermediate 1",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 16,
+										"name": "Horror"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Nate_the_Great.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 38,
+									"name": "Where the Red Fern Grows",
+									"description": "Where the Red Fern Grows by Wilson Rawls:\r\nFollow the heartwarming journey of a boy and his two loyal dogs in the Ozark Mountains.",
+									"file": null,
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/where_the_red_fern_grows_book_website.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 39,
+									"name": "Coraline",
+									"description": "\"Coraline\" by Neil Gaiman:\r\nCoraline discovers a parallel world that seems perfect, but things take a dark turn in this eerie and imaginative tale.",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Neil-Gaiman_Coraline.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 40,
+									"name": "The Call of the Wild",
+									"description": "\"The Call of the Wild\" by Jack London\r\n\r\nDescription: Join Buck, a domestic dog turned wild, as he navigates the harsh Alaskan wilderness during the Klondike Gold Rush.",
+									"file": null,
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Call+of+Wild.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 41,
+									"name": "Around the World in Eighty Days",
+									"description": "\"Around the World in Eighty Days\" by Jules Verne\r\n\r\nDescription: Join Phileas Fogg and his servant Passepartout as they attempt to circumnavigate the globe in just eighty days.",
+									"file": null,
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Around_the_World_in_Eighty_Days.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 42,
+									"name": "The Jungle Book",
+									"description": "\"The Jungle Book\" by Rudyard Kipling\r\n\r\nDescription: Follow Mowgli, a young boy raised by wolves in the jungle, as he encounters various animals and learns valuable life lessons.",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Jungle.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 43,
+									"name": "The Swiss Family Robinson",
+									"description": "\"The Swiss Family Robinson\" by Johann David Wyss\r\n\r\nDescription: Shipwrecked on a deserted island, the Robinson family uses resourcefulness and teamwork to survive and thrive.",
+									"file": null,
+									"level": {
+										"id": 9,
+										"name": "Pre-Intermediate 3",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/JW_Swiss+Family+Robinson.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 44,
+									"name": "The Adventures of Tom Sawyer",
+									"description": "\"The Adventures of Tom Sawyer\" by Mark Twain\r\n\r\nDescription: Follow the mischievous and imaginative Tom Sawyer as he embarks on various adventures along the Mississippi River.",
+									"file": null,
+									"level": {
+										"id": 10,
+										"name": "Intermediate 1",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/The_Adventures_of_Tom_Sawyer.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 45,
+									"name": "A Wrinkle in Time",
+									"description": "\"A Wrinkle in Time\" by Madeleine L'Engle\r\n\r\nDescription: Meg Murry, along with her brother and friend, embarks on a cosmic journey to rescue her father from an evil force.",
+									"file": null,
+									"level": {
+										"id": 11,
+										"name": "Intermediate 2",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/A+Wrinkle+in+Time-+Madeleine+LEngle.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 46,
+									"name": "I, Robot",
+									"description": "\"I, Robot\" by Isaac Asimov\r\n\r\nDescription: Explore a collection of interconnected short stories that delve into the relationship between humans and intelligent robots.",
+									"file": null,
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/Asimov-Isaac-I-Robot.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 47,
+									"name": "Ender's Game",
+									"description": "\"Ender's Game\" by Orson Scott Card\r\n\r\nDescription: In a future where gifted children are trained for war, follow the story of Ender Wiggin as he prepares to face an alien threat.",
+									"file": null,
+									"level": {
+										"id": 12,
+										"name": "Intermediate 3",
+										"cefr_name": "B1+"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/EndersGame.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 48,
+									"name": "The Giver",
+									"description": "\"The Giver\" by Lois Lowry\r\n\r\nDescription: In a seemingly utopian society, Jonas discovers the dark truths behind his world and must make a difficult choice.",
+									"file": null,
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/The+Giver+(Full+Book).pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 49,
+									"name": "The War of the Worlds",
+									"description": "\"The War of the Worlds\" by H.G. Wells\r\n\r\nDescription: Witness the invasion of Earth by Martians and the struggle for survival in this classic science fiction novel.",
+									"file": null,
+									"level": {
+										"id": 14,
+										"name": "Upper-Intermediate 2",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/The_War_of_the_Worlds_NT.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 50,
+									"name": "The Time Machine",
+									"description": "\"The Time Machine\" by H.G. Wells\r\n\r\nDescription: Join the Time Traveller on a journey into the distant future, exploring the evolution of humanity and encountering strange civilizations.",
+									"file": null,
+									"level": {
+										"id": 8,
+										"name": "Pre-Intermediate 2",
+										"cefr_name": "B1"
+									},
+									"category": {
+										"id": 10,
+										"name": "Adventure"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/timemach.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								},
+								{
+									"id": 51,
+									"name": "The Hobbit",
+									"description": "The Hobbit by J.R.R. Tolkien: Follow Bilbo Baggins, a hobbit with a taste for comfort, as he unexpectedly joins a group of dwarves on a quest to reclaim a stolen treasure guarded by the dragon Smaug.",
+									"file": null,
+									"level": {
+										"id": 15,
+										"name": "Upper-Intermediate 3",
+										"cefr_name": "B2"
+									},
+									"category": {
+										"id": 13,
+										"name": "Fantasy"
+									},
+									"src": "https://d8tj7d7pfsmw2.cloudfront.net/resources/books/the_hobbit_tolkien.pdf",
+									"created_at": null,
+									"likes_count": 0,
+									"views_count": 0
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET list of exclusive content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/exclusives",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"exclusives"
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"id": 87,
+									"name": "Harry Potter and the Philosopher's Stone Part 1",
+									"description": "Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/vrQh1FpUUeVcDaeAp5_SQMeU3z3BlnpW.jpg",
+									"src": "9b5d573adfd551e9c8ede2f077885e6b",
+									"video_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ2aWRlb0lkIjoiOWI1ZDU3M2FkZmQ1NTFlOWM4ZWRlMmYwNzc4ODVlNmIiLCJleHAiOjE3NTc0OTg3MTh9.DqvS5LmxR6tViKA2tSjx0L0sVMtNL1LbuDp9JZnvhF6Pnp9gf5VKeG8bMABExiBOOKi9t0J9SpJDTjJslUyutus4GqJ-zRr0mJD4tg7XVdQoZdXtqtoNL6Fv-h8fS4pKzMUhEmYwASwHWlbrBE7HAGZkE4YlsOdEOAQC2geL1TmRclwVPSZ-uJ1nxa1oQCAOQq-ZHfOnSINVz5kF6PFHFHp0LKUuBB_tO-ySBJYqDgfYaILA9UOJrYKoRPobdRTRXLTR6-xsbjuvPrBHopqQRn6cv6wwjnz89pDXSSFjwd4FXpAw2Dd02ejzMoMfHvPQbYfkJ4oWqSUzUeXPjo0lmw",
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 32,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"is_public": 0,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								},
+								{
+									"id": 88,
+									"name": "Harry Potter and the Philosopher's Stone Part 2",
+									"description": "Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him.",
+									"file": "https://d8tj7d7pfsmw2.cloudfront.net/1/khZYJQqsbJ7NtMLO7KQg8nN7rbagONJc.jpg",
+									"src": "71cdc68b24845173cf6f1587f704b632",
+									"video_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ2aWRlb0lkIjoiNzFjZGM2OGIyNDg0NTE3M2NmNmYxNTg3ZjcwNGI2MzIiLCJleHAiOjE3NTc0OTg3MTh9.BRVwAbvxDQeLsl9vSb5K5zMQbVWDaqPrhFdyzoMNnZtYhRpdmEml8VSzz7g9Kbc9QZy5sOUE0mPC50j1TOEsSfLcpeGQbVee0ph_tpewjBx7kgC3ZqExaYzdDHV2TXCR9hU6-F1pukFFU1kTKwM8GwLMVatcNx8ipbl0NKxYOevFZ2L1bnBV3UmbVJrjE__trScaLZkyVnjfVAVgcXkZCorsc479SxnoJWsXjRVDYD4d6OmhTVwTeQEW0YhfgCVdRohOrdg_cgs500B9zQiSjCHUIEUeZz8SVy-xzjKA4sPk-7x-ktVbIY6Mk9yEmMFpt2bdcniK6HE-A15aBxMmRw",
+									"level": {
+										"id": 4,
+										"name": "Elementary 1",
+										"cefr_name": "A2"
+									},
+									"category": {
+										"id": 32,
+										"name": "Fantasy"
+									},
+									"created_at": null,
+									"is_public": 0,
+									"duration": "02:48:24",
+									"likes_count": 0,
+									"liked": false,
+									"views_count": 0
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "GET comments on exclusive content",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-token",
+								"value": "{{api-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{APP_URL}}/student/{{APP_VERSION}}/resource/comments?resource_id=87",
+							"host": [
+								"{{APP_URL}}"
+							],
+							"path": [
+								"student",
+								"{{APP_VERSION}}",
+								"resource",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "resource_id",
+									"value": "87"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"ok": true,
+							"status_code": 200,
+							"description": "Success",
+							"result": [
+								{
+									"id": 2,
+									"text": "aaaaaaaaaaaaaaaaaaaa",
+									"likes_count": 0,
+									"created_at": "2025-09-06 17:48:34",
+									"student": {
+										"id": 28,
+										"uuid": "_2zabQjb3uCJ6AUJ",
+										"fullname": "Hoshimjon Ro'ziyev",
+										"avatar": "https://d8tj7d7pfsmw2.cloudfront.net/static/male.png",
+										"themes": []
+									},
+									"liked": false
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "HCTE_FdlTwog88v_wcn3sXlTLHOTexoa03tip7Kz",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

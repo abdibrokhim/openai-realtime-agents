@@ -16,19 +16,27 @@ For full documentation, guides, and API references, see the official [OpenAI Age
 **NOTE:** For a version that does not use the OpenAI Agents SDK, see the [branch without-agents-sdk](https://github.com/openai/openai-realtime-agents/tree/without-agents-sdk).
 
 Primary pattern used:
-1. **Single Chat Agent:** A realtime chat agent handles short turns and micro-corrections without tool-calling.
+1. **Personalized Chat Agent:** A realtime chat agent with integrated Englify backend API access for personalized learning experiences.
 
 ## Setup
 
 - This is a Next.js typescript app. Install dependencies with `npm i`.
-- Add your `OPENAI_API_KEY` to your env. Either add it to your `.bash_profile` or equivalent, or copy `.env.sample` to `.env` and add it there.
+- Copy `env.example` to `.env` and configure your environment variables:
+  ```bash
+  cp env.example .env
+  ```
+- Add your API keys and backend configuration:
+  - `OPENAI_API_KEY`: Your OpenAI API key for Realtime API
+  - `ENGLIFY_API_URL`: Your Englify backend API base URL
+  - `ENGLIFY_API_TOKEN`: API token for backend authentication
+  - `ENGLIFY_BEARER_TOKEN`: Bearer token for user-specific requests
 - Start the server with `npm run dev`
 - Open your browser to [http://localhost:3000](http://localhost:3000). It should default to the `chatSupervisor` Agent Config.
 - You can change examples via the "Scenario" dropdown in the top right.
 
 # Chat-Supervisor
 
-This is implemented in the [chatSupervisor](src/app/agentConfigs/chatSupervisor/index.ts) Agent Config. The chat agent keeps the flow natural and brief.
+This is implemented in the [chatSupervisor](src/app/agentConfigs/chatSupervisor/index.ts) Agent Config. The chat agent integrates with your Englify backend to provide personalized learning experiences.
 
 Video walkthrough: [https://x.com/noahmacca/status/1927014156152058075](https://x.com/noahmacca/status/1927014156152058075)
 
@@ -101,9 +109,25 @@ export const greeterAgent = new RealtimeAgent({
 // An Agent Set is just an array of the agents that participate in the scenario
 export default [greeterAgent, haikuWriterAgent];
 ```
-## Teaching Flow
+## Teaching Flow & API Integration
 
-No tool-calling is used in this version. The agent responds directly, keeping turns short and redirecting when necessary.
+The agent now uses API tool-calling to provide personalized learning experiences:
+
+### Available API Tools
+- `getUserProfile` - Get user's current level, points, and progress
+- `getLeaderboard` - Check user's ranking among peers
+- `getPodcasts` - Fetch available podcasts for listening practice
+- `getMovies` - Get movies suitable for the user's level
+- `getBooks` - Find books for reading practice
+- `getRecommendations` - Get personalized content suggestions based on user level
+- `getResourceDetails` - Get detailed information about specific content
+
+### Personalization Features
+- Knows user's current English level (Starter, Beginner, Elementary, etc.)
+- Recommends content matching user's proficiency
+- Tracks learning progress and achievements
+- Provides level-appropriate corrections and guidance
+- Suggests next steps based on user performance
 
 ## Schematic
 

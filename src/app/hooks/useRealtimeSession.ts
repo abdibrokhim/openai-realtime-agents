@@ -97,6 +97,8 @@ export function useRealtimeSession(callbacks: RealtimeSessionCallbacks = {}) {
 
       // history events
       sessionRef.current.on("agent_handoff", handleAgentHandoff);
+      sessionRef.current.on("agent_tool_start", historyHandlers.handleAgentToolStart);
+      sessionRef.current.on("agent_tool_end", historyHandlers.handleAgentToolEnd);
       sessionRef.current.on("history_updated", historyHandlers.handleHistoryUpdated);
       sessionRef.current.on("history_added", historyHandlers.handleHistoryAdded);
       sessionRef.current.on("guardrail_tripped", historyHandlers.handleGuardrailTripped);
