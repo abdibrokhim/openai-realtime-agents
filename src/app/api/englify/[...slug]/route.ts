@@ -3,10 +3,11 @@ import { NextRequest, NextResponse } from 'next/server';
 // Englify API proxy route
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string[] } }
+  { params }: { params: Promise<{ slug: string[] }> }
 ) {
   try {
-    const slug = params.slug.join('/');
+    const { slug } = await params;
+    const slugPath = slug.join('/');
     const baseUrl = process.env.ENGLIFY_API_URL || 'https://v2-api-erp.englifyschool.com';
     const apiToken = process.env.ENGLIFY_API_TOKEN;
     const bearerToken = process.env.ENGLIFY_BEARER_TOKEN;
@@ -15,7 +16,7 @@ export async function GET(
       return NextResponse.json({ error: 'API configuration missing' }, { status: 500 });
     }
 
-    const url = `${baseUrl}/${slug}`;
+    const url = `${baseUrl}/${slugPath}`;
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
       'api-token': apiToken,
