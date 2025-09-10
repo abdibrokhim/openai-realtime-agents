@@ -147,11 +147,7 @@ function App() {
     setSelectedAgentConfigSet(agents);
   }, [searchParams]);
 
-  useEffect(() => {
-    if (selectedAgentName && sessionStatus === "DISCONNECTED") {
-      connectToRealtime();
-    }
-  }, [selectedAgentName]);
+  // Removed auto-connection - agent now only connects when user sends first message
 
   useEffect(() => {
     if (
@@ -163,7 +159,7 @@ function App() {
         (a) => a.name === selectedAgentName
       );
       addTranscriptBreadcrumb(`Agent: ${selectedAgentName}`, currentAgent);
-      updateSession(!handoffTriggeredRef.current);
+      updateSession(false); // Never auto-trigger response - wait for user input
       // Reset flag after handling so subsequent effects behave normally
       handoffTriggeredRef.current = false;
     }
@@ -272,15 +268,18 @@ function App() {
       },
     });
 
-    // Send an initial 'hi' message to trigger the agent to greet the user
-    if (shouldTriggerResponse) {
-      sendSimulatedUserMessage('hi');
-    }
+    // Removed auto-greeting to save tokens - agent only responds to user messages
     return;
   }
 
-  const handleSendTextMessage = () => {
+  const handleSendTextMessage = async () => {
     if (!userText.trim()) return;
+    
+    // Connect if not already connected (lazy initialization)
+    if (sessionStatus === "DISCONNECTED") {
+      await connectToRealtime();
+    }
+    
     interrupt();
 
     try {
@@ -292,7 +291,12 @@ function App() {
     setUserText("");
   };
 
-  const handleTalkButtonDown = () => {
+  const handleTalkButtonDown = async () => {
+    // Connect if not already connected (lazy initialization)
+    if (sessionStatus === "DISCONNECTED") {
+      await connectToRealtime();
+    }
+    
     if (sessionStatus !== 'CONNECTED') return;
     interrupt();
 
